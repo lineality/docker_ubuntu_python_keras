@@ -221,6 +221,6 @@ sudo docker system df
 
 
 
-
+## Sample Output from Browser
 ![Image](https://github.com/lineality/docker_ubuntu_python_keras/blob/main/bowser_outout_keras_mvp.png)
 
