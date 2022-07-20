@@ -202,5 +202,5 @@ sudo docker system df
 - https://www.codethebest.com/modulenotfounderror-no-module-named-skbuild-solved/ 
 - https://stackoverflow.com/questions/55313610/importerror-libgl-so-1-cannot-open-shared-object-file-no-such-file-or-directo 
 - https://www.tensorflow.org/install/
-
+- https://hub.docker.com/r/tensorflow/tensorflow/ 
 
