@@ -106,30 +106,44 @@ images = [
     ]
 ]
 
+# Terminal Print: data arrays
 print(images[0])
 print(images[1])
+
+# Variables to store data arrays
 
 image0 = images[0]
 image1 = images[1]
 
+# store words in lists/arrays
 text_1 = []
 text_2 = []
 
+# build NLP/OCR pipeline
 prediction_groups = pipeline.recognize(images)
 
+# run prediction on image 1
 predicted_image_1 = prediction_groups[0]
 for text, box in predicted_image_1:
+    # terminal print
     print(text)
+
+    # add text to list of words
     text_1.append( text )
 
+# run prediction on image 2
 predicted_image_2 = prediction_groups[1]
 for text, box in predicted_image_2:
+    # terminal print
     print(text)
+
+    # add text to list of words
     text_2.append( text )  
 
-
+# Flask "app" (note, in AWS maybe named differently)
 app = Flask(__name__)
 
+# main function
 @app.route("/")
 def index():
     return f"""
@@ -165,14 +179,16 @@ Successfully tagged ###:latest
 ```
 $ sudo docker run --name flaskapp -v$PWD/app:/app -p5000:5000 project_abc:latest
 ```
+
+## See you results in a browser
 Now the application can be accessed at 
-http://localhost:5000 
+http://localhost:5000  
 or 
 http://0.0.0.0:5000/
 
 #### Successful run should print a display to a browser.
 ```
-Hello, World.
+Hello, World... etc.
 ```
 
 ## Remove Old Files 
