@@ -182,9 +182,8 @@ $ sudo docker run --name flaskapp -v$PWD/app:/app -p5000:5000 project_abc:latest
 
 ## See you results in a browser
 Now the application can be accessed at 
-http://localhost:5000  
-or 
-http://0.0.0.0:5000/
+
+http://localhost:5000 or  http://0.0.0.0:5000/
 
 #### Successful run should print a display to a browser.
 ```
@@ -219,4 +218,9 @@ sudo docker system df
 - https://stackoverflow.com/questions/55313610/importerror-libgl-so-1-cannot-open-shared-object-file-no-such-file-or-directo 
 - https://www.tensorflow.org/install/
 - https://hub.docker.com/r/tensorflow/tensorflow/ 
+
+
+
+
+![Image](https://github.com/lineality/docker_ubuntu_python_keras/blob/main/bowser_outout_keras_mvp.png)
 
