@@ -10,7 +10,7 @@ Follow each step and run each command in your terminal. Instructions that start 
 ## New Project Folder
 It is recommended that you create a project-folder and then do your work in that folder("directory"). Run this line of code to create a project folder and then make that folder the "current working directory" where your terminal opera"my_project_folder" is arbitrary, you can name your project anything you like.
 ```
-$ mkdir my_project_folder; cd my_project_folder
+$ mkdir my_project_folder_keras; cd my_project_folder_keras
 ```
 
 
@@ -196,18 +196,32 @@ $ sudo docker system prune; sudo docker image prune; sudo docker volume prune; s
 ```
 
 
-## Remove Old Files  (optional)
+## Look for Old Files  (optional)
 Check if docker is still using memory in any area:
 ```
+sudo docker system df
+
+sudo docker container ls -a
+```
+
+### If a container is still running: Get container name, Then stop container, Then prune
+```
+sudo docker container ls -a
+
+sudo docker stop CONTAINER_NUMBER_HERE
+
+sudo docker container prune
+
 sudo docker system df
 ```
 
 
 
 
-
 ## Sources and Resources
-- use ubuntu, install docker
+#### use ubuntu, install docker
+- https://linuxize.com/post/how-to-list-docker-containers/ 
+- https://linuxhandbook.com/remove-docker-images/ 
 - https://docs.docker.com/engine/install/ubuntu/
 - https://www.freecodecamp.org/news/how-to-remove-all-docker-images-a-docker-cleanup-guide/ 
 - https://www.educba.com/docker-entrypoint/
